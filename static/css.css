@@ -1,0 +1,166 @@
+/* CSS reaset  */
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+/* CSS variables  */
+:root{
+    --border: 2px solid red;
+}
+
+/* Navigation bar  */
+#nav  {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    position: sticky;
+    top: 0px;
+}
+#nav::before {
+    content: "";
+    background-color: black;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+
+/* Navigation bar: logo  */
+#logo {
+    margin: 10px 25px;
+}
+#nav #logo img{
+    height: 85px;
+    margin: 10px;
+}
+
+/* Navigation bar: list  */
+#nav ul{
+    display: flex;
+}
+#nav ul li{
+    list-style: none;
+    font-size: 1.3rem;
+}
+#nav ul li a{
+    display: block;
+    border: 10px;
+    padding: 4px 25px;
+    text-decoration: none;
+    border-radius: 10px;
+    color: white;
+    font-family: 'Balsamiq Sans', cursive;
+}
+#nav ul li a:hover{
+    background-color: white;
+    color: black;
+}
+#nav ul li a:active{
+    background-color: grey;
+    color: black;
+}
+
+
+/* Home section  */
+#home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 20px;
+    height: 700px;
+    /* position: relative; */
+}
+#home::before{
+    content: "";
+    position: absolute;
+    height: 141%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+    opacity: 0.2;
+}
+#home::before{
+    content: "";
+    position: absolute;
+    background: url('assets/bg1.png')no-repeat center bottom/cover;
+    height: 141%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.2;
+}
+#home h1{
+    margin: 50px 0px;
+}
+#home .btn a{
+    text-decoration: none;
+}
+#home .btn a:active{
+    color: blueviolet;
+}
+
+/* Utilities classes  */
+.h-primary {
+    font-size: 2.8rem;
+    padding: 20px;
+    font-family: 'Balsamiq Sans', cursive;
+}
+.h-secondery{
+    font-size: 1.8rem;
+    font-family: 'Balsamiq Sans', cursive;
+}
+.para {
+    font-size: 1.5rem;
+    padding: 5px;
+    font-family: 'Baloo Bhai 2', cursive;
+}
+.center{
+    text-align: center;
+}
+.btn{
+    border: none;
+    padding: 4px 20px;
+    background-color: #c2d288;
+    font-size: 1.8rem;
+    border-radius: 9px;
+    margin: auto;
+    font-family: 'Balsamiq Sans', cursive;
+}
+.btn:hover {
+    cursor: pointer;
+    background-color: rgb(201, 79, 79);
+}
+
+/* input text */
+.inputtext{
+    
+    padding: 7px;
+    border-radius: 6px;
+    font-size: 16px;
+    background: #c2d288;
+    border: 2px solid black;
+    height: 36px;
+    box-shadow: 0 0 0 1px #dddddd, 0 2px 4px 0 rgb(0 0 0 / 7%), 0 1px 1.5px 0 rgb(0 0 0 / 5%);
+}
+:focus{
+    border: 2px solid #000;
+    border-radius: 4px;
+}
+
+.input_text{
+    margin: 20px;
+}
+
+.btn1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

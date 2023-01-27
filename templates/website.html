@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Demand Prediction</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css.css')}}">
+    <!-- <link rel="stylesheet" media="screen and (max-width: 950px)" href="CSS/phone.css"> -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+</head>
+
+<body>
+
+    <!-- Navigation section  -->
+    <nav id="nav">
+        <!-- <div id="logo">
+            <img src="logo.png" alt="logo">
+        </div>
+        <ul>
+            <li class="item"><a href="">Home</a></li>
+            <li class="item"><a href="">About us</a></li>
+            <li class="item"><a href="">Contact us</a></li>
+            <li class="item"><a href="">Services</a></li>
+        </ul> -->
+        <h1 class="h-primary center">
+            Product Demand Predictor
+        </h1>
+    </nav>
+
+
+    <!-- Home section  -->
+    <section id="home">
+        <h1 class="h-primary center">
+            Check your product demand here
+        </h1>
+
+        <form action="/predict" method="post">
+
+            <div class="btn1">
+
+                <div class="input_text" style="margin: 10;">
+                    <label for="product_name" class="para">
+                        Enter Product Name :
+                    </label>
+                    <input type="text" class="inputtext" required>
+                </div>
+                <div class="input_text">
+                    <label for="base_price" class="para">
+                        Enter Base Price :
+                    </label>
+                    <input type="number" class="inputtext" name="base" required>
+                </div>
+                <div class="input_text">
+                    <label for="total_price" class="para">
+                        Enter Total Price :
+                    </label>
+                    <input type="number" class="inputtext" name="total" required>
+                </div>
+
+                <button class="btn" type="submit">
+                    Predict
+                </button>
+            </div>
+
+            <h1 class="h-primary center">
+                Demand is {{ans}}
+            </h1>
+
+
+
+        </form>
+    </section>
+
+
+</body>
+
+</html>
